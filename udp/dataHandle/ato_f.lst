@@ -1,0 +1,309 @@
+====> GLOBAL
+
+	ATO周期	VARS_CYCLE	32	(4)
+	日志等级	VARS_DEC	8	(1)
+	事件日志	VARS_EVENT	32	[00000000| 读到信标:_ 传感器错误:_ 数据库错误:_ IO接口变化:_ 状态变化:_ 牵引制动切换:_ 停准:_ 车门变化:_ PSD变化:_ 实施EB:_ 目标点变化:_ 定位错误:_ ATS中断:_ 数据错误:_ 过走:_ 行车方向错误:_]
+D	列车绝对位移(m)	VARS_DEC	32	(0) 
+D	列车速度(KPH*10)	VARS_DEC	32	(0)
+D	牵引制动输出	VARS_DEC	16	(0)
+	位置(区段号)	VARS_HEX	32	[00000000]
+	位置(偏移量 cm)	VARS_DEC	32	(0)
+	到停车点距离(cm)	VARS_DEC	32	(1000000)
+	到目标点距离(cm)	VARS_DEC	32	(0)
+
+<==== GLOBAL
+
+====> ATP接口 
+
+	ATP报文序列号	VARS_DEC	32	(1)
+	列车运行模式	VARS_DEC	8	(1)
+	列车可用模式	VARS_DEC	8	(0)
+	列车完整性	VARS_DEC	8	(1)
+	列车车头方向	VARS_DEC	8	(2)
+	采用的传感器	VARS_DEC	8	(1)
+	脉冲距离(mm)	VARS_DEC	32	(5154)
+	空转打滑状态	VARS_DEC	8	(1)
+	溜车状态	VARS_DEC	8	(1)
+	ATP速度(mm/s)	VARS_DEC	32	(0)
+	EB原因	VARS_HEX	32	[00000000]
+	列车定位状态	VARS_DEC	8	(2)
+	最大车头区段	VARS_HEX	32	[ffffffff]
+	最大车头偏移(mm)	VARS_DEC	32	(4294967295)
+	最小车头区段	VARS_HEX	32	[ffffffff]
+	最小车头偏移(mm)	VARS_DEC	32	(4294967295)
+	最大车尾区段	VARS_HEX	32	[ffffffff]
+	最大车尾偏移(mm)	VARS_DEC	32	(4294967295)
+	最小车尾区段	VARS_HEX	32	[ffffffff]
+	最小车尾偏移(mm)	VARS_DEC	32	(4294967295)
+	当前区段限速(mm/s)	VARS_DEC	32	(4294967295)
+	目标点1距离(mm)	VARS_DEC	32	(4294967295)
+	目标点1区段	VARS_HEX	32	[ffffffff]
+	目标点1偏移(mm)	VARS_DEC	32	(4294967295)
+	目标点1限速(mm/s)	VARS_DEC	32	(4294967295)
+	目标点2距离(mm)	VARS_DEC	32	(4294967295)
+	目标点2区段	VARS_HEX	32	[ffffffff]
+	目标点2偏移(mm)	VARS_DEC	32	(4294967295)
+	目标点2限速(mm/s)	VARS_DEC	32	(4294967295)
+D	ATP EB速度(mm/s)	VARS_DEC	32	(4294967295)
+	TOD指导速度(mm/s)	VARS_DEC	32	(4294967295)
+	停准标志	ENUM	1	_
+	零速指示	ENUM	1	_
+	开门允许	ENUM	1	_
+	发车允许	ENUM	1	_
+	EB施加	ENUM	1	_
+	FSB施加	ENUM	1	_
+	EB释放	ENUM	1	X
+	NA	VARS_DEC	1	_
+	TOD报警	VARS_DEC	8	(2)
+	倒车标志	VARS_DEC	8	(2)
+	CC2健康状态	VARS_DEC	32	(1)
+	DSU版本	VARS_HEX	32	[00000111]
+	ATP与ZC连接状态	VARS_DEC	8	(4)
+	ATP连接的ZC	VARS_DEC	32	(4294967295)
+	PE使能标志	VARS_DEC	8	(2)
+	nvMal区段	VARS_HEX	32	[ffffffff]
+	nvMal偏移	VARS_DEC	32	(0)
+	ATO-ATP序列号	VARS_DEC	32	(4)
+	ATO可用标志	VARS_DEC	8	(2)
+	ATB命令	VARS_DEC	8	(0)
+	牵引惰行状态	VARS_DEC	8	(0)
+	左PSD命令	VARS_DEC	8	(0)
+	右PSD命令	VARS_DEC	8	(0)
+	站停超时标志	VARS_DEC	8	(0)
+	FSB命令	VARS_DEC	8	(2)
+	TOD状态	VARS_DEC	8	(1)
+
+<==== ATP接口 
+
+====> ATS接口 
+
+	ATS报文序列号	VARS_DEC	32	(0)
+	车次号	VARS_DEC	32	(0)
+	DID	VARS_HEX	32	[00000000]
+	扣车命令	VARS_DEC	8	(0)
+	跳停命令	VARS_DEC	8	(0)
+	惰行命令	VARS_DEC	8	(0)
+	临时停车命令	VARS_DEC	8	(0)
+	发车命令	VARS_DEC	8	(0)
+	运行等级	VARS_DEC	8	(0)
+	制动等级	VARS_DEC	8	(0)
+	下一站站停时间	VARS_DEC	8	(0)
+	站停列表	VARS_HEX	48	[ffffffffffff]
+	ATS起点站台ID	VARS_HEX	32	[00000000]
+	ATS终点站台ID	VARS_HEX	32	[00000000]
+	DOORMODE	VARS_DEC	8	(0)
+	到下站的时间	VARS_DEC	32	(0)
+	下站ID	VARS_HEX	32	[00000000]
+	下站停车状态	VARS_DEC	8	(0)
+	ATO-ATS序列号	VARS_DEC	32	(0)
+	列车永久ID	VARS_DEC	32	(0)
+	CCID	VARS_HEX	32	[00000000]
+	司机ID	VARS_DEC	32	(0)
+	扣车响应	VARS_DEC	8	(0)
+	惰行响应	VARS_DEC	8	(0)
+	跳停响应	VARS_DEC	8	(0)
+	临时停车响应	VARS_DEC	8	(0)
+	制动状态	VARS_DEC	8	(0)
+	车门状态	VARS_DEC	8	(0)
+	ATS事件记录	VARS_HEX	32	[00000000]
+	站停倒计时	VARS_DEC	8	(0)
+	DOOR_MODE	VARS_DEC	8	(0)
+	到下一站时间	VARS_DEC	32	(0)
+	里程数	VARS_DEC	32	(0)
+	轮径校准标志	VARS_HEX	8	[00]
+	CC版本	VARS_HEX	32	[00000000]
+	Map版本	VARS_HEX	32	[00000000]
+	Map版本校准标志	VARS_HEX	8	[00]
+	列车编组	VARS_DEC	8	(0)
+	车门旁路标志	VARS_HEX	8	[00]
+	牵引故障	VARS_DEC	8	(0)
+	制动故障	VARS_DEC	8	(0)
+	TOD故障	VARS_DEC	8	(0)
+	车门故障	VARS_DEC	8	(0)
+	多普勒故障	VARS_DEC	8	(0)
+	OPG故障	VARS_DEC	8	(0)
+	应答器故障	VARS_DEC	8	(0)
+	保持制动	VARS_DEC	8	(0)
+	0系ATP状态	VARS_HEX	8	[00]
+	1系ATP状态	VARS_HEX	8	[00]
+	2系ATP状态	VARS_HEX	8	[00]
+
+<==== ATS接口 
+
+====> 传感器数据 
+
+	传感器A状态	VARS_HEX	8	[55]
+	A最大脉冲值	VARS_DEC	32	(0)
+	A最小脉冲值	VARS_DEC	32	(0)
+	A最大脉冲频率	VARS_DEC	32	(0)
+	A最小脉冲频率	VARS_DEC	32	(0)
+	传感器B状态	VARS_HEX	8	[55]
+	B最大脉冲值	VARS_DEC	32	(0)
+	B最小脉冲值	VARS_DEC	32	(0)
+	B最大脉冲频率	VARS_DEC	32	(0)
+	B最小脉冲频率	VARS_DEC	32	(0)
+	多普勒报文有效标志	VARS_HEX	8	[55]
+	多普勒有效报文数	VARS_DEC	8	(12)
+	多普勒精度标志	VARS_DEC	8	(1)
+	多普勒速度(mm/s)	VARS_DEC	16	(0)
+	信标ID	VARS_LIST	32	[00000000]
+	信标锁存最大A	VARS_DEC	32	(0)
+	信标锁存最小A	VARS_DEC	32	(0)
+	信标锁存最大B	VARS_DEC	32	(0)
+	信标锁存最小B	VARS_DEC	32	(0)
+
+<==== 传感器数据 
+
+====> IO接口 
+
+	输入板卡0数据1	VARS_HEX	8	[c2]
+	输入板卡0数据2	VARS_HEX	8	[01]
+	输入板卡1数据1	VARS_HEX	8	[99]
+	输入板卡1数据2	VARS_HEX	8	[01]
+	输入板卡2数据1	VARS_HEX	8	[80]
+	输入板卡2数据2	VARS_HEX	8	[00]
+	输入板卡3数据1	VARS_HEX	8	[01]
+	输入板卡3数据2	VARS_HEX	8	[00]
+	输出板卡3数据1	VARS_HEX	8	[00]
+	输出板卡3数据2	VARS_HEX	8	[00]
+	ADOADC	ENUM	1	_
+	ADOMDC	ENUM	1	_
+	MDOMDC	ENUM	1	_
+	NA	VARS_DEC	1	_
+	门全关标志	ENUM	1	_
+	ATB按钮	ENUM	1	_
+	发车按钮	ENUM	1	_
+	NA	VARS_DEC	1	_
+
+<==== IO接口 
+
+====> ZC接口 
+
+	DSU版本	VARS_DEC	32	(0)
+	NVMal区段	VARS_HEX	32	[00000000]
+	NVMal偏移	VARS_DEC	32	(0)
+	ZCID	VARS_HEX	32	[00000000]
+	道岔状态	VARS_HEX	160	[0000000000000000000000000000000000000000]
+	站台状态	VARS_HEX	240	[000000000000000000000000000000000000000000000000000000000000]
+
+<==== ZC接口 
+
+====> 平台数据 
+
+	本系健康状态	VARS_HEX	8	[55]
+	本系主备状态	VARS_HEX	8	[55]
+	另一系健康状态	VARS_HEX	8	[55]
+	另一系主备状态	VARS_HEX	8	[55]
+	TOD连接状态	VARS_HEX	8	[55]
+	ATS连接状态	VARS_HEX	8	[00]
+	平台周期号	VARS_DEC	32	(3)
+	本系健康状态To平台	VARS_HEX	8	[55]
+	电流值输出	VARS_DEC	16	(0)
+	输入单元数	VARS_DEC	8	(12)
+	输入单元1ID	VARS_HEX	32	[46000400]
+	输入单元2ID	VARS_HEX	32	[46000000]
+	输入单元3ID	VARS_HEX	32	[62000000]
+	输入单元4ID	VARS_HEX	32	[63000000]
+	输入单元5ID	VARS_HEX	32	[61000000]
+	输入单元6ID	VARS_HEX	32	[65000000]
+	输入单元7ID	VARS_HEX	32	[44000000]
+	输入单元8ID	VARS_HEX	32	[44010000]
+	输入单元9ID	VARS_HEX	32	[44020000]
+	输入单元10ID	VARS_HEX	32	[44030000]
+	输入单元11ID	VARS_HEX	32	[5a010000]
+	输入单元12ID	VARS_HEX	32	[5a000000]
+	输入单元13ID	VARS_HEX	32	[00000000]
+	输入单元14ID	VARS_HEX	32	[00000000]
+	输入单元15ID	VARS_HEX	32	[00000000]
+	输入单元16ID	VARS_HEX	32	[00000000]
+	输入单元17ID	VARS_HEX	32	[00000000]
+	输入单元18ID	VARS_HEX	32	[00000000]
+	输入单元19ID	VARS_HEX	32	[00000000]
+	输入单元20ID	VARS_HEX	32	[00000000]
+	输出单元数	VARS_DEC	8	(5)
+	输出单元1ID	VARS_HEX	32	[5a020000]
+	输出单元2ID	VARS_HEX	32	[48000000]
+	输出单元3ID	VARS_HEX	32	[8a000000]
+	输出单元4ID	VARS_HEX	32	[49030000]
+	输出单元5ID	VARS_HEX	32	[50000000]
+	输出单元6ID	VARS_HEX	32	[00000000]
+	输出单元7ID	VARS_HEX	32	[00000000]
+	输出单元8ID	VARS_HEX	32	[00000000]
+	输出单元9ID	VARS_HEX	32	[00000000]
+	输出单元10ID	VARS_HEX	32	[00000000]
+
+<==== 平台数据 
+
+====> TMS接口数据 
+
+	报文头	VARS_DEC	8	(0)
+	检测码	VARS_DEC	8	(0)
+	ATO命令回采	VARS_HEX	8	[00]
+	列车系统状态	VARS_HEX	8	[00]
+	CRC检验码	VARS_HEX	16	[0000]
+	报文尾	VARS_DEC	8	(0)
+	报文头	VARS_DEC	8	(242)
+	序列检测码	VARS_DEC	8	(8)
+	牵引制动输出	VARS_HEX	16	[0000]
+	CC状态	VARS_HEX	8	[00]
+	错误事件	VARS_HEX	8	[00]
+	自动驾驶状态	VARS_HEX	8	[00]
+	站台信息	VARS_HEX	8	[00]
+	起始站ID	VARS_HEX	16	[0000]
+	目的地ID	VARS_HEX	16	[0000]
+	下一站ID	VARS_HEX	16	[0000]
+	列车号	VARS_DEC	16	(0)
+	到下一站距离	VARS_DEC	16	(0)
+	时间-年	VARS_DEC	8	(0)
+	时间-月	VARS_DEC	8	(0)
+	时间-日	VARS_DEC	8	(0)
+	时间-时	VARS_DEC	8	(0)
+	时间-分	VARS_DEC	8	(0)
+	时间-秒	VARS_DEC	8	(0)
+	列车速度	VARS_DEC	16	(0)
+	CRC检验码	VARS_HEX	16	[0000]
+	报文尾	VARS_DEC	8	(0)
+
+<==== TMS接口数据 
+
+====> 调试信息 
+
+D	ATO EB限速(KPH*10)	VARS_DEC	32	(0)
+D	目标速度(KPH*10)	VARS_DEC	32	(0)
+D	站停曲线(KPH*10)	VARS_DEC	32	(0)
+D	坡度	VARS_DEC	32	(0)
+D	加速度(mm/s)	VARS_DEC	16	(0)
+D	TC速度(KPH*10)	VARS_DEC	32	(0)
+	到站台的距离(m)	VARS_DEC	32	(268435455)
+	9周期累计脉冲值	VARS_DEC	16	(0)
+	零速标志	ENUM	1	_
+	速度正常标志	ENUM	1	_
+	位置正常标志	ENUM	1	_
+	人工过走标志	ENUM	1	_
+	NA	VARS_DEC	4	(192)
+	站停站台ID	VARS_HEX	32	[04ffffff]
+	停车点区段	VARS_HEX	32	[19ffffff]
+	停车点偏移	VARS_DEC	32	(0)
+	上次站停区段	VARS_HEX	32	[19ffffff]
+	无ATP单元的周期	VARS_DEC	8	(2)
+	无传感器单元的周期	VARS_DEC	8	(0)
+	无多普勒单元的周期	VARS_DEC	8	(0)
+	无ZC单元的周期	VARS_DEC	8	(0)
+	列车车头方向	ENUM	8	HEAD_WEST
+	列车行驶方向	ENUM	8	MOVE_WEST
+	TOD状态	VARS_DEC	8	(0)
+	司机号	VARS_DEC	32	(0)
+	连接的ATSID	VARS_HEX	32	[00000000]
+	位置控制点ID	VARS_HEX	16	[ffff]
+	位置匹配ATSID	VARS_HEX	16	[0000]
+	ATO主状态	VARS_DEC	8	(2)
+	自动运行状态	VARS_DEC	8	(1)
+	站台停车状态	VARS_DEC	8	(0)
+	自动折返1状态	VARS_DEC	8	(0)
+	自动折返2状态	VARS_DEC	8	(1)
+	ATO身份	ENUM	8	车头主系
+	周期运行时间	VARS_DEC	8	(46)
+	FSB原因	VARS_HEX	8	[00]
+
+<==== 调试信息 
+

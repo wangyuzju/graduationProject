@@ -1,0 +1,7 @@
+*.pyc
+*.iml
+*.bin
+.idea/
+/data/
+/backup/
+
