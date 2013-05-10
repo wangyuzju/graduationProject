@@ -11,14 +11,23 @@ values = []
 
 def save(data):
     global values
-    values.append('(0, \'' + data + '\')')
-    if len(values) > 39:
+    values.append('(' + data + ')')
+    if len(values) > 99:
         query = 'insert into train values ' + ','.join(values)
         values = []
         cursor.execute(query)
         conn.commit()
         print str(datetime.now()) + 'inserted!'
 
+
+def safe_exit():
+    global values
+    if len(values):
+        query = 'insert into train values ' + ','.join(values)
+        values = []
+        cursor.execute(query)
+        conn.commit()
+    print 'Mysql connection Closed!'
 
 
 def show():

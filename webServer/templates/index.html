@@ -6,8 +6,7 @@
 </head>
 <body>
 {% for msg in data %}
-  {{ msg }}
-  {{ msg.0 }}-{{ msg.1 }}-{{ msg.2 }}-{{ msg.3 }}-{{ msg.4 }}-{{ msg.5 }}-{{ msg.6 }}-{{ msg.7 }}-{{ msg.8 }}<br>
+  {{ msg.0 }}:[{{ msg.1 }}, {{ msg.2 }}, {{ msg.3 }}, {{ msg.4 }}, {{ msg.5 }}] >>>>ORIGIN: {{ msg }}<br>
 {% endfor %}
 </body>
 </html>

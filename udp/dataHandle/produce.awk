@@ -4,18 +4,19 @@ BEGIN {
     math = 0
     english = 0
     computer = 0
-    current = "g"
+    sum = 0
 }
 #运行中
 {
-    if( $1 == current ){
-        math++
+    if( $1 == "" ){
+        print sum
+        math += sum
+        sum = 0
     }else{
-        current = $1
-        math = 0
+        sum ++
     }
-    printf "%s%d %s %s\n", $1,math, $2, $3
 }
 #运行后
 END {
+    print "Total: %d", math
 }

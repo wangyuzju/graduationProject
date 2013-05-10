@@ -6,4 +6,5 @@ urlpatterns = patterns(
     '',
     (r'^$', views.init),
     (r'^data$', views.data),
+    (r'^data/origin', views.list_all),
 )
