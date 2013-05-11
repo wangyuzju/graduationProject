@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <title>绘图</title>
+
+
+  <link rel="stylesheet" href="/static/css/foundation.css" />
+
+
+  <!--<script src="/static/js/vendor/custom.modernizr.js"></script>-->
+
+</head>
+<body ontouchmove="event.preventDefault()">
+  <nav class="top-bar">
+    <ul class="title-area">
+      <!-- Title Area -->
+      <li class="name">
+        <h1><a href="/">Foundation</a></h1>
+      </li>
+      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+  
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="divider"></li>
+        <li><a href="/grid.php">Features</a></li>
+        <li class="divider"></li>
+        <li><a href="/templates.php">Add-ons</a></li>
+        <li class="divider"></li>
+        <li><a href="/case-jacquelinewest.php">Case Studies</a></li>
+        <li class="divider"></li>
+        <li><a href="/docs/">Docs</a></li>
+        <li class="divider"></li>
+        <li><a href="/training.php">Training</a></li>
+        <li class="divider"></li>
+        <li class="has-form">
+          <a href="http://foundation.zurb.com/docs" class="button">Getting Started</a>
+        </li>
+      </ul>
+    </section>
+  </nav>
+  <style type="text/css">
+    #graphic {width: 1000px; margin: auto; border:1px solid #00a4a4;height: 580px;}
+    #data {display: none;}
+  </style>
+  <section id="graphic">
+    
+  </section>
+  
+<script>
+  document.write('<script src=' +
+    ('__proto__' in {} ? '/static/js/vendor/zepto' : '/static/js/vendor/jquery') +
+    '.js><\/script>')
+  if (location.hash == "#debug"){
+    document.write(window.innerWidth+':'+window.innerHeight)
+  }
+</script>
+
+  <script src="/static/js/foundation.min.js"></script>
+  <script src="/static/js/foundation/foundation.tooltips.js"></script>
+  <script src="/static/js/raphael-min.js"></script>
+  <script src="/static/js/popup.js"></script>
+  <script src="/static/js/main.js"></script>
+  <!--<script src="/static/js/analytics.js"></script>
+  <!--
+  
+  <script src="js/foundation/foundation.js"></script>
+  
+  <script src="js/foundation/foundation.alerts.js"></script>
+  
+  <script src="js/foundation/foundation.clearing.js"></script>
+  
+  <script src="js/foundation/foundation.cookie.js"></script>
+  
+  <script src="js/foundation/foundation.dropdown.js"></script>
+  
+  <script src="js/foundation/foundation.forms.js"></script>
+  
+  <script src="js/foundation/foundation.joyride.js"></script>
+  
+  <script src="js/foundation/foundation.magellan.js"></script>
+  
+  <script src="js/foundation/foundation.orbit.js"></script>
+  
+  <script src="js/foundation/foundation.placeholder.js"></script>
+  
+  <script src="js/foundation/foundation.reveal.js"></script>
+  
+  <script src="js/foundation/foundation.section.js"></script>
+  
+  
+  
+  <script src="js/foundation/foundation.topbar.js"></script>
+  
+  -->
+
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>

@@ -20,9 +20,11 @@ def data(request):
 
 
 def list_all(request):
+    """
     cursor = connection.cursor()
     query = ('select g4,g5,g6,atp30,debug2,debug5'
              ' FROM train')
     cursor.execute(query)
     data = cursor.fetchall()
-    return render_to_response('index.html', {'data': data})
+    """
+    return render_to_response('graphic.html', {'data': data})

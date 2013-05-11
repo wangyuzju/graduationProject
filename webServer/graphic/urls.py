@@ -4,7 +4,7 @@ from graphic import views
 
 urlpatterns = patterns(
     '',
-    (r'^$', views.init),
+    (r'^$', views.data),
     (r'^data$', views.data),
     (r'^data/origin', views.list_all),
 )
